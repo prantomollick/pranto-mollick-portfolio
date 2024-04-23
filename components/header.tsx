@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
+import { useActiveSection } from "@/context/active-section-context";
 
 function Header() {
-  const [activeSection, setActiveSection] = useState("Home");
+  const { activeSection, setActiveSection } = useActiveSection();
 
   return (
     <header className="relative z-[999]">
