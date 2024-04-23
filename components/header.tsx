@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { links } from "@/lib/data";
-import Link from "next/link";
-import clsx from "clsx";
 import { useActiveSection } from "@/context/active-section-context";
+import { links } from "@/lib/data";
+import clsx from "clsx";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 function Header() {
-  const { activeSection, setActiveSection } = useActiveSection();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSection();
 
   return (
     <header className="relative z-[999]">
@@ -31,7 +31,10 @@ function Header() {
                   { "text-gray-950": activeSection === link.name },
                 )}
                 href={link.hash}
-                onClick={() => setActiveSection(link.name)}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
               >
                 {link.name}
                 {link.name === activeSection && (

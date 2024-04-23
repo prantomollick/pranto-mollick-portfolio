@@ -1,19 +1,24 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
+import { useActiveSection } from "@/context/active-section-context";
+import { useSectionInView } from "@/hooks/use-section-in-view";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import pranto from "@/public/pranto.png";
+import { HiDownload } from "react-icons/hi";
+import { useInView } from "react-intersection-observer";
 
 function Intro() {
+  const { ref } = useSectionInView({ sectionName: "Home" });
+
   return (
     <section
       className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
       id="home"
+      ref={ref}
     >
       <div className="flex items-center justify-center">
         <div className="relative">

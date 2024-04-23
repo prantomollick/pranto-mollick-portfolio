@@ -1,9 +1,12 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
+import { useSectionInView } from "@/hooks/use-section-in-view";
 import SectionHeading from "./section-heading";
 
 function About() {
+  const { ref } = useSectionInView({ sectionName: "About" });
+
   return (
     <motion.section
       className="mb-28 max-w-[45rem] scroll-mt-28 text-center leading-7 sm:mb-40"
@@ -12,6 +15,7 @@ function About() {
       viewport={{ once: true }}
       transition={{ delay: 0.17 }}
       id="about"
+      ref={ref}
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3 text-gray-900">
