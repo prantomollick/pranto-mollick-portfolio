@@ -6,11 +6,12 @@ import SectionHeading from "./section-heading";
 function About() {
   return (
     <motion.section
-      className="mb-28 max-w-[45rem] text-center leading-7 sm:mb-40"
+      className="mb-28 max-w-[45rem] scroll-mt-28 text-center leading-7 sm:mb-40"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: 0.17 }}
+      id="about"
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3 text-gray-900">

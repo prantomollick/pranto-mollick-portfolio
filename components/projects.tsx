@@ -6,7 +6,7 @@ export type ProjectProps = (typeof projectsData)[number];
 
 function Projects() {
   return (
-    <section>
+    <section id="projects" className="scroll-mt-28">
       <SectionHeading>My projects</SectionHeading>
       <div>
         {projectsData.map((project, idx) => (
