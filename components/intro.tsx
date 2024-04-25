@@ -12,7 +12,7 @@ import { HiDownload } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 
 function Intro() {
-  const { ref } = useSectionInView({ sectionName: "Home" });
+  const { ref } = useSectionInView("Home", 0.5);
 
   return (
     <section

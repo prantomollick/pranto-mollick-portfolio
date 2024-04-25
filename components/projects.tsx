@@ -8,7 +8,7 @@ import SectionHeading from "./section-heading";
 export type ProjectProps = (typeof projectsData)[number];
 
 function Projects() {
-  const { ref } = useSectionInView({ sectionName: "Projects" });
+  const { ref } = useSectionInView("Projects", 0.5);
 
   return (
     <section id="projects" className="scroll-mt-28" ref={ref}>
