@@ -34,13 +34,28 @@ function Contact() {
         through this form.
       </p>
 
-      <form className="mt-10 flex flex-col">
+      <form
+        className="mt-10 flex flex-col"
+        action={async (formData) => {
+          console.log(formData.get("email"));
+          console.log(formData.get("message"));
+        }}
+      >
         <input
           type="email"
+          name="email"
           className="borderBlack h-14 rounded-lg px-4"
           placeholder="Your email"
+          required
+          maxLength={500}
         />
-        <textarea className="borderBlack my-3 h-52 rounded-lg p-4" />
+        <textarea
+          className="borderBlack my-3 h-52 rounded-lg p-4"
+          name="message"
+          required
+          maxLength={500}
+          placeholder="Your message"
+        />
         <button
           type="submit"
           className="group flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full bg-gray-900 text-white outline-none transition-all hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
