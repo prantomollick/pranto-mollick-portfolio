@@ -33,7 +33,7 @@ export const sendEmail = async (formData: FormData) => {
     from: "onboarding@resend.dev",
     to: "prantomollick01@gmail.com",
     subject: "Message from contact form",
-    reply_to: senderEmail,
+    reply_to: senderEmail as string,
     text: `Name: ${senderEmail}\n\n${message}`,
   });
 };
