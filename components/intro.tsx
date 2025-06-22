@@ -59,7 +59,7 @@ function Intro() {
       >
         <span className="font-bold">Hello, I&rsquo;m Pranto!</span> I&rsquo;m a
         <span className="font-bold"> full-stack developer</span> with
-        <span className="font-bold"> 6 years</span> of experience. I enjoy
+        <span className="font-bold"> 6.5 years</span> of experience. I enjoy
         building{" "}
         <span className="italic">
           Sites, web apps, web applications and services
