@@ -35,7 +35,7 @@ function About() {
         My expertise lies in developing high-performance applications using a
         comprehensive tech stack that includes{" "}
         <span className="font-medium text-gray-950">
-          HTML, CSS, SCSS, React, Next.js, Node.js, JavaScript, MongoDB, MySQL,
+          HTML, CSS, SCSS, WordPress, PHP, Laravel, React, Next.js, Node.js, JavaScript, MongoDB, MySQL,
           TypeScript, Prisma, and Python
         </span>
         . I am always guided by{" "}

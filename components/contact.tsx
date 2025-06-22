@@ -31,7 +31,7 @@ function Contact() {
       <SectionHeading>Contact me</SectionHeading>
       <p className="-mt-6 text-gray-700">
         Please contact me directly at{" "}
-        <a href="mailto:example@gmail.com">prantomollick01@gmail.com</a> or
+        <a href="mailto:example@gmail.com">contact@prantomollick.com</a> or
         through this form.
       </p>
 
